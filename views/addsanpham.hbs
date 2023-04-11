@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Thêm sản phẩm</h2>
+    <form action="/addsanpham" method="post" autocomplete="off">
+      <div class="form-group">
+        <label for="">Tên sản phẩm :</label>
+        <input type="text" class="form-control" name="tensanpham" placeholder="Nhập tên sản phẩm">
+      </div>
+      <div class="form-group">
+        <label for="">số lượng:</label>
+        <input type="number" class="form-control" name="soluong" min="0" placeholder="Nhập số lượng">
+      </div>
+      <div class="form-group">
+        <label for="">Số giá tiền:</label>
+        <input type="tel" class="form-control" name="giatien" min="0" placeholder="Nhập SDT">
+      </div>
+
+      <div class="form-group">
+        <label for="">Ảnh sản phẩm:</label>
+        <input type="text" class="form-control" name="anh"  placeholder="Nhập link ảnh">
+      </div>
+
+      <button type="submit" class="btn btn-default"> Thêm sản phẩm</button>   
+      <a href="/sanpham" class="btn btn-default">Hủy</a>
+
+    </form>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Thêm User</h2>
+    <form action="/themuser" method="post" autocomplete="off">
+      <div class="form-group">
+        <label for="">Tên :</label>
+        <input type="text" class="form-control" name="ten" placeholder="Nhập tên User">
+      </div>
+      <div class="form-group">
+        <label for="">Email:</label>
+        <input type="email" class="form-control" name="email" placeholder="Nhập Email">
+      </div>
+      <div class="form-group">
+        <label for="">Số điện thoại:</label>
+        <input type="number" class="form-control" name="sdt" min="0" placeholder="Nhập SDT">
+      </div>
+
+      <button type="submit" class="btn btn-default"> Thêm User</button>   
+      <a href="/user" class="btn btn-default">Hủy</a>
+
+    </form>
+  </div>
+
+</body>
+
+</html>

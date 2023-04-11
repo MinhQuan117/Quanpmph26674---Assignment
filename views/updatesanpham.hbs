@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Sửa sản phẩm</h2>
+    <form action="/updatesanpham" method="post", autocomplete="off">
+    <input type="hidden" id="id" name="id" value="{{id}}">
+      <div class="form-group">
+        <label for="tensanpham">Tên sản phẩm:</label>
+        <input type="text" class="form-control" id="tensanpham" name="tensanpham" value="{{this.tensanpham}}">
+      </div>
+      <div class="form-group">
+        <label for="soluong">Số lượng:</label>
+        <input type="number" class="form-control" name="soluong" value="{{this.soluong}}">
+      </div>
+      <div class="form-group">
+        <label for="giatien">Giá tiền:</label>
+        <input type="number" class="form-control" name="giatien" min="0" value="{{this.giatien}}">
+      </div>
+      <div class="form-group">
+        <label for="anh">Ảnh:</label>
+        <input type="text" class="form-control" name="anh"  value="{{this.anh}}">
+      </div>
+
+      <button type="submit" class="btn btn-default"> Sửa sản phẩm</button>   
+      <a href="/sanpham" class="btn btn-default">Hủy</a>
+    </form>
+  </div>
+
+</body>
+
+</html>

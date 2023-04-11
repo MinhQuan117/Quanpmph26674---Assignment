@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://localhost:3000/sanpham">ShopQuanAo</a>
+            </div>
+            <ul class="nav navbar-nav">
+                {{!-- <li class="active"><a href="http://localhost:3000/trangchu">Trang chủ</a></li> --}}
+
+                <li><a href="http://localhost:3000/user">User</a></li>
+
+                <li><a href="http://localhost:3000/sanpham">List sản phẩm</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://localhost:3000/dangkitaikhoan"><span class="glyphicon glyphicon-user"></span> Sign
+                        Up</a>
+                </li>
+                <li><a href="http://localhost:3000/dangnhap"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <br>
+            <div>
+                <a class="btn btn-md btn-default navbar-left" href="http://localhost:3000/addsanpham">Thêm sản phẩm</a>
+
+                <form action="/searchsanpham">
+                    <div class="navbar-form navbar-right">
+                        <input type="key" class="form-control" placeholder="Tìm kiếm" name="key">
+                        <button class="btn btn-primary" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+
+
+            <div class="card">
+                <table class="table table-hover shopping-cart-wrap">
+                    <thead class="text-muted">
+                        <tr>
+                            <th scope="col" width="300" style="font-size: large; color: black;">Sản phẩm</th>
+                            <th scope="col" width="400" style="font-size: large; color: black;">Tên sản phẩm</th>
+                            <th scope="col" width="200" style="font-size: large; color: black;">Số lượng</th>
+                            <th scope="col" width="200" style="font-size: large; color: black;">Giá</th>
+                            <th scope="col" width="200" class="text-right" style="font-size: large; color: black;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each sanphams}}
+                        <tr>
+                            <td>
+                                <figure class="media">
+                                    <div class="img-wrap"><img src={{this.anh}} class="img-thumbnail img-sm"
+                                            style="height: 200px;max-width: 100%;"></div>
+                                    <figcaption class="media-body">
+                                    </figcaption>
+                                </figure>
+                            </td>
+
+                            <td>
+                                <h4 class="title text-truncate">{{this.tensanpham}}</h4>
+                            </td>
+                            <td> {{this.soluong}} </td>
+                            <td>
+                                <div class="price-wrap ">
+                                    <h5> {{this.giatien}} ₫ </h5>
+                                </div>
+                            </td>
+                            <td><a href="/updatesanpham/{{_id}}" class="btn btn-default btn-sm ">Sửa</a>
+                                <a href="/deletesanpham/{{this._id}}"
+                                    onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm {{this.tensanpham}} này?')"
+                                    class="btn btn-default btn-sm"> Xóa </a>
+                            </td>
+                        </tr>
+                        {{/each}}
+    </body>
+
+</html>

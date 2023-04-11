@@ -1,0 +1,23 @@
+const mongoose = require('mongoose');
+
+const SanPhamSchema = new mongoose.Schema({
+    anh: {
+        type: String,
+    },
+
+    tensanpham: {
+        type: String,
+    },
+
+    soluong: {
+        type: Number,
+    },
+
+    giatien:{
+        type: Number
+    }
+});
+
+const SanPhamModal = new mongoose.model('Sanpham', SanPhamSchema);
+
+module.exports = SanPhamModal;

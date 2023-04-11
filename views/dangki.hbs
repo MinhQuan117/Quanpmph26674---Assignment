@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Đăng kí </h2>
+        <form action="/dangki" method="post">
+            <div class="form-group">
+                <label for="usr">Username:</label>
+                <input type="text" class="form-control" name="ten" id="ten" required="">
+            </div>
+            <div class="form-group">
+                <label for="usr">Password:</label>
+                <input type="password" class="form-control" name="password" id="password" required="">
+            </div>
+            <div class="form-group">
+                <label for="usr">Email:</label>
+                <input type="email" class="form-control" name="email" id="email" required="">
+            </div>
+            <div class="form-group">
+                <label for="usr">Phone:</label>
+                <input type="number" class="form-control" name="sdt" id="sdt" required="">
+            </div>
+
+            <Button class="btn btn-default" type="submit">Đăng kí</Button>
+
+            <a href="http://localhost:3000/dangnhap" class="btn btn-default" type="submit">Đăng nhập</a>
+        </form>
+    </div>
+
+    <script src="/app.js">
+
+    </script>
+</body>
+
+</html>
